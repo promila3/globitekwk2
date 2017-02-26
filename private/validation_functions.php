@@ -36,4 +36,14 @@
     return preg_match("/^[0-9().-]+$/ ", $value);
   }
 
+   function is_valid_country_id($value){
+    if($value>0 && $value<2000){
+      return true;
+    }
+  }
+  
+  function has_valid_code_format($value) {
+    // regex for state code in generals
+    return preg_match("/^[A-Za-z]+$/ ", $value);
+  }
 ?>
