@@ -46,4 +46,10 @@
     // regex for state code in generals
     return preg_match("/^[A-Za-z]+$/ ", $value);
   }
+   function has_valid_position($value){
+    if($value > 0 && $value < 100){
+      return true;
+    }
+  }
+  
 ?>

@@ -115,7 +115,12 @@
       return $errors;
     }
 
-    $sql = ""; // TODO add SQL
+    $sql = "UPDATE states SET ";
+    $sql .= "name='" . ($state['name']) . "', ";
+    $sql .= "code='" . ($state['code']) . "', ";
+    $sql .= "country_id='" . ($state['country_id']) . "' ";
+    $sql .= "WHERE id='" . ($state['id']) . "' ";
+    $sql .= "LIMIT 1;";
     // For update_state statments, $result is just true/false
     $result = db_query($db, $sql);
     if($result) {
@@ -163,6 +168,18 @@
 
   function validate_territory($territory, $errors=array()) {
     // TODO add validations
+	 if (is_blank($territory['name'])) {
+      $errors[] = "Name cannot be blank.";
+    } elseif (!has_length($territory['name'], array('min' => 2, 'max' => 255))) {
+      $errors[] = "Name must be between 2 and 255 characters.";
+    } elseif(!has_valid_name_format($territory['name'])){
+      $errors[] = "Name can only contain A-Z, a-z, and space";
+    }
+    if (is_blank($territory['position'])) {
+      $errors[] = "Position cannot be blank.";
+    }elseif(!has_valid_position($territory['position'])){
+      $errors[] = "Position can only be a positive integer between 1 and 99";
+    }
 
     return $errors;
   }
@@ -177,7 +194,13 @@
       return $errors;
     }
 
-    $sql = ""; // TODO add SQL
+     $sql = "INSERT INTO territories ";
+    $sql .= "(name, state_id, position) ";
+    $sql .= "VALUES (";
+    $sql .= "'" . db_escape($db, $territory['name']) . "',";
+    $sql .= "'" . db_escape($db, $territory['state_id']) . "',";
+    $sql .= "'" . db_escape($db, $territory['position']). "' ";
+    $sql .= ");";
     // For INSERT statments, $result is just true/false
     $result = db_query($db, $sql);
     if($result) {
@@ -201,7 +224,12 @@
       return $errors;
     }
 
-    $sql = ""; // TODO add SQL
+    $sql = "UPDATE territories SET ";
+    $sql .= "name='" . $territory['name'] . "', ";
+    $sql .= "state_id='" . db_escape($db, $territory['state_id']) . "', ";
+    $sql .= "position='" . db_escape($db, $territory['position']) . "' ";
+    $sql .= "WHERE id='" . db_escape($db, $territory['id']) . "' ";
+    $sql .= "LIMIT 1;";
     // For update_territory statments, $result is just true/false
     $result = db_query($db, $sql);
     if($result) {
