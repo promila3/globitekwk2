@@ -17,7 +17,7 @@ $country_name = $country['name'];
 <?php include(SHARED_PATH . '/header.php'); ?>
 
 <div id="main-content">
-  <a href="../countries/show.php?id=<?php echo $state['country_id']; ?>">Back to Country Details</a>
+  <a href="index.php">Back to States</a>
   <h1>State: <?php echo $state['name']; ?></h1>
 
   <?php
@@ -46,7 +46,7 @@ $country_name = $country['name'];
 
     <h2>Territories</h2>
     <br />
-    <a href="../territories/new.php?state_id=<?php echo $state['id']; ?>">Add a Territory</a><br />
+    <a href="../territories/new.php?id=<?php echo $state['id']; ?>">Add a Territory</a><br />
 
 <?php
     $territory_result = find_territories_for_state_id($state['id']);
