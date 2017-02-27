@@ -25,11 +25,11 @@ The following **required** functionality is completed:
   * [x ]  Required: new.php
   * [x ]  Required: edit.php
 
-6\. [ ]  Required: Complete Staff CMS for Territories
-  * [ ]  Required: index.php
-  * [ ]  Required: show.php
-  * [ ]  Required: new.php
-  * [ ]  Required: edit.php
+6\. [x ]  Required: Complete Staff CMS for Territories
+  * [x ]  Required: index.php
+  * [x ]  Required: show.php
+  * [x ]  Required: new.php
+  * [x ]  Required: edit.php
 
 7\. [x ]  Required: Add Data Validations
   * [x ]  Required: Validate that no values are left blank.
@@ -39,17 +39,17 @@ The following **required** functionality is completed:
   * [x ]  Required: Validate that email addresses contain only whitelisted characters.
   * [x ]  Required: Add *at least 5* other validations of your choosing.
 
-8\. [ ]  Required: Sanitization
-  * [ ]  Required: All input and dynamic output should be sanitized.
+8\. [x ]  Required: Sanitization (for ?Territories)
+  * [x ]  Required: All input and dynamic output should be sanitized.
   * [ ]  Required: Sanitize dynamic data for URLs
-  * [ ]  Required: Sanitize dynamic data for HTML
-  * [ ]  Required: Sanitize dynamic data for SQL
+  * [x ]  Required: Sanitize dynamic data for HTML
+  * [ x]  Required: Sanitize dynamic data for SQL
 
-9\. [ ]  Required: Penetration Testing
+9\. [x ]  Required: Penetration Testing
   * [ ]  Required: Verify form inputs are not vulnerable to SQLI attacks.
   * [ ]  Required: Verify query strings are not vulnerable to SQLI attacks.
-  * [ ]  Required: Verify form inputs are not vulnerable to XSS attacks.
-  * [ ]  Required: Verify query strings are not vulnerable to XSS attacks.
+  * [x ]  Required: Verify form inputs are not vulnerable to XSS attacks.
+  * [x ]  Required: Verify query strings are not vulnerable to XSS attacks.
   * [ ]  Required: Listed other bugs or security vulnerabilities
 
 
@@ -70,7 +70,7 @@ The following advanced user stories are optional:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://github.com/promila3/globitekwk2/blob/master/Assinment2.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/promila3/globitekwk2/blob/master/Assinment2ver2.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
